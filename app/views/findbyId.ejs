@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Find By Id</title>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <% if (data) { %>
+            <h4><%= data.title %></h4>
+            <h4><%= data.description %></h4>
+            <h4><%= data.published %></h4> 
+            <p><%= data.createdAt %></p>
+            <span><%= data.updatedAt %></span>
+    <%} else { %> 
+        <h2> No data found </h2>
+      <% } %>
+</body>
+</html>

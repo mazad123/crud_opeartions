@@ -36,7 +36,9 @@ exports.create = (req, res) => {
 exports.findAll = (req, res) => {
 	Tutorial.findAll()
 	  .then(data => {
-		res.send(data);
+		console.log("data is:",data);
+		// res.send(data);
+		res.render('index', { title:"Get all data from databse", data});
 	  })
 	  .catch(err => {
 		res.status(500).send({
@@ -52,7 +54,9 @@ exports.findOne = (req, res) => {
   
 	Tutorial.findByPk(id)
 	  .then(data => {
-		res.send(data);
+		// res.send(data);
+		console.log("data is:",data);
+		res.render('findbyId', { title:"Get Single data by id from databse", data});
 	  })
 	  .catch(err => {
 		res.status(500).send({
